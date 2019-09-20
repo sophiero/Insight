@@ -1,2 +1,2 @@
-# Corn Acerage Prediction using Satellite Imagery
+# Corn Acerage Forecasting using Satellite Imagery
 Insight AI project
