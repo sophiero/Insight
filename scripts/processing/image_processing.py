@@ -4,7 +4,6 @@ import osgeo.gdalnumeric as gdn
 from PIL import Image
 import matplotlib.pyplot as plt
 
-
 # Function to load multi-spectral raster to numpy array
 # https://gis.stackexchange.com/questions/32995/fully-load-raster-into-a-numpy-array
 def img_to_array(input_file, dim_ordering="channels_last", dtype='float32':
@@ -32,17 +31,3 @@ def plot_image(image, factor=1):
         plt.imshow(np.minimum(image * factor, 1))
     else:
         plt.imshow(image)
-
-    plt.savefig('figures/test')
-
-
-# img_file = 'data/raw/X__.tif'
-labels_file = 'data/raw/_.tif'
-
-# img_array = img_to_array(img_file)
-labels_array = labels_to_array(labels_file)
-#
-# np.save('data/processed/york_img_final.npy', img_array)
-np.save('data/processed/york_mask_final.npy', labels_array)
-
-# plot_image(img_array[:,:,[3,2,1]], 5)
