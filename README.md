@@ -4,17 +4,17 @@ Insight AI project
 ## Dataset Sources
 
 Two datasets, Sentinel-2 satellite imagery and Cropland Data Layer, are used for this project.
-The area of interest for this project was Southeast Nebraska, an argricultural region  high fertility of the soils
+The area of interest for this project was Southeast Nebraska, an argricultural region of the U.S.
 
 
 ### 1. Sentinel-2 Satellite Imagery
 
 Sentinel-2 is a open satellite imagery source, with global coverage recaptured every 5 days. The images are acquired at a high spatial resolution (10m), offering multi-spectral data with 13 bands in the visible, near infrared, and short wave infrared part of the spectrum.
-
 The python library sentinel-hub was used to download Sentinel-2 satellite imagery.
 
-![alt text](https://github.com/sophiero/Insight/blob/master/notebooks/figures/satellite_sample.png)
+Below is a sample satellite image from the region of interest:
 
+<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/satellite_sample.png" width="250"/>
 
 
 ### 2. Cropland Data Layer
@@ -22,13 +22,15 @@ The python library sentinel-hub was used to download Sentinel-2 satellite imager
 CropScape is a web service that offers crop-specific land cover data layer based on USDA agricultural reports.
 Crop labels were downloaded by area of interest, year and crop from https://nassgeodata.gmu.edu/CropScape/.
 
-![alt text](https://github.com/sophiero/Insight/blob/master/notebooks/figures/labels_sample.png)
+Below are the corresponding crop labels for the sample image shown above:
+
+<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/labels_sample.png" width="250"/>
 
 
-## Model Approaches
+## Modeling Approaches
+
+For remote sensing problems, there are two main approaches existing in literature. The result of both methods is the same - given an input of a satellite image, the model should output a mask of the same size that assigns a label (corn/not corn) to every pixel in the image.
 
 1. Single Pixel Classification
-
-
 
 2. Image Segmentation
