@@ -29,13 +29,17 @@ Crop labels were downloaded by area of interest, year and crop from https://nass
 
 For remote sensing problems, there are two main approaches existing in literature. The result of both methods is essentially the same - given an input of a satellite image, the model should output a mask of the same size that assigns a label (corn/not corn) to every pixel in the image.
 
-<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/model_input_output.png" width="600" />
+<p align="center">
+  <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/model_input_output.png" width="600" />
+</p>
 
 ### 1. Single Pixel Classification
 
 In the single pixel classification approach, the model learns to classify each pixel as corn/not corn (0/1). We use the 13 spectral bands of the satellite image as features, with each data instance represented as a pixel. This is a naive approach that considers only the context (spectral bands) to determine the corn crops from the satellite image. We train a logistic regression for binary classification of the pixels.
 
-<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/single_pixel_structure.png" width="500"/>
+<p align="center">
+  <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/single_pixel_structure.png" width="500"/>
+</p>
 
 ### 2. Image Segmentation
 
