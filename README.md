@@ -2,13 +2,11 @@
 
 [View Presentation Slides](https://docs.google.com/presentation/d/1GmVpUNw_DBMHZnufedEwjZ4IvqOwcysUB-lbLHi818U/edit?usp=sharing)
 
-This project is outlines the workflow for training a model using satellite imagery to estimate corn crop acerage. Two approaches, single pixel classification and image segmentation, are implemented and compared. We consider Southeast Nebraska as an area of interest, but the methods implemented can be scaled up to larger regions and other crop types. 
+This project is outlines the workflow for training a model using satellite imagery to estimate corn crop acerage. Two approaches, single pixel classification and image segmentation, are implemented and compared. We consider Southeast Nebraska as an area of interest, but the methods can be scaled up to larger regions and other crop types. 
 
 ## Dataset Sources
 
-Two datasets, Sentinel-2 satellite imagery and Cropland Data Layer, are used for this project.
-
-### 1. Sentinel-2 Satellite Imagery
+1. Sentinel-2 Satellite Imagery
 
 Sentinel-2 is a open satellite imagery source, with global coverage recaptured every 5 days. The images are acquired at a high spatial resolution (10m), offering multi-spectral data with 13 bands in the visible, near infrared, and short wave infrared part of the spectrum.
 The python library [sentinel-hub](https://github.com/sentinel-hub/sentinelhub-py) was used to download Sentinel-2 satellite imagery.
@@ -17,7 +15,7 @@ The python library [sentinel-hub](https://github.com/sentinel-hub/sentinelhub-py
 
 <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/satellite_sample.png" width="250"/> -->
 
-### 2. Cropland Data Layer
+2. Cropland Data Layer
 
 CropScape is a web service that offers crop-specific land cover data layer based on USDA agricultural reports.
 Crop labels were downloaded by area of interest, year and crop from https://nassgeodata.gmu.edu/CropScape/.
