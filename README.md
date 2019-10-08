@@ -49,3 +49,5 @@ The figure below depicts the U-Net architecture from the original paper, (U-net:
 
 
 ## Results
+
+<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/results.png" width="600" />
