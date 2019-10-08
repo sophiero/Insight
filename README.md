@@ -13,7 +13,7 @@ Sentinel-2 is a open satellite imagery source, with global coverage recaptured e
 
 The python library sentinel-hub was used to download Sentinel-2 satellite imagery for this project.
 
-![alt text]('./notebooks/figures/satellite_sample.png')
+![alt text]('https://github.com/sophiero/Insight/blob/master/notebooks/figures/satellite_sample.png')
 
 
 
@@ -22,6 +22,7 @@ The python library sentinel-hub was used to download Sentinel-2 satellite imager
 CropScape is a web service that offers crop-specific land cover data layer based on USDA agricultural reports.
 Crop labels were downloaded by area of interest, year and crop from https://nassgeodata.gmu.edu/CropScape/.
 
+![alt text]('https://github.com/sophiero/Insight/blob/master/notebooks/figures/labels_sample.png')
 
 
 ## Model Approaches
