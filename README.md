@@ -45,10 +45,12 @@ In the single pixel classification approach, the model learns to classify each p
 
 In the image segmentation approach, rather than single pixels, the input are patches of the image. Given this input, the model is able to learn both contextual and spatial information. A convolutional neural network called U-Net was developed for image segmentation tasks. The symmetric contracting and expanding paths of the model architecture allow the model to extract features and increase the resolution of the output. Using the [keras-unet](https://github.com/karolzak/keras-unet) package, we trained a custom U-Net model with 32 filters and 4 layers for the corn crop segmentation problem.
 
-The figure below depicts the U-Net architecture from the original paper, [U-net: Convolutional networks for biomedical image segmentation](https://arxiv.org/abs/1505.04597):
+The figure below depicts the U-Net architecture from the original paper, <br />
+[U-net: Convolutional networks for biomedical image segmentation](https://arxiv.org/abs/1505.04597):
 
-<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/unet.png" width="600" />
-
+<p align="center">
+  <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/unet.png" width="600" />
+</p>
 
 ## Results
 
