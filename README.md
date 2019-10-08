@@ -46,6 +46,7 @@ The figure below depicts the U-Net architecture from the original paper, [U-net:
 
 ## Results
 
+The two models were trained on July 2017 data, and tested on July 2018 data in the same region. The results show that the image segmentation approach performs better than the single pixel classification approach, with an 10% increase in interesection-over-union. Salt-and-pepper noise can be seen in the single pixel classification predictions, as a result of the model learning on a pixel level not capturing spatial information. The issue is resolved with the image segemntation approach, as the U-Net captures both the contextual and spatial information.
 
 
-<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/results.png" width="600" />
+<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/results.png" />
