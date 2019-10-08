@@ -1,6 +1,8 @@
 # Corn Acerage Forecasting using Satellite Imagery
 Insight AI project
 
+[View Presentation Slides](https://docs.google.com/presentation/d/1GmVpUNw_DBMHZnufedEwjZ4IvqOwcysUB-lbLHi818U/edit?usp=sharing)
+
 ## Dataset Sources
 
 Two datasets, Sentinel-2 satellite imagery and Cropland Data Layer, are used for this project.
@@ -31,13 +33,13 @@ For remote sensing problems, there are two main approaches existing in literatur
 
 ### 1. Single Pixel Classification
 
-In the single pixel classification approach, the model learns to classify each pixel as corn/not corn (0/1). We use the 13 spectral bands of the satellite image as features, with each data instance represented as a pixel. This is a naive approach that considers only the context (spectral bands) to determine the corn crops from the satellite image. The model does not capture spatial information. We train a logistic regression for binary classification of the pixels.
+In the single pixel classification approach, the model learns to classify each pixel as corn/not corn (0/1). We use the 13 spectral bands of the satellite image as features, with each data instance represented as a pixel. This is a naive approach that considers only the context (spectral bands) to determine the corn crops from the satellite image. We train a logistic regression for binary classification of the pixels.
 
 <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/single_pixel_structure.png" width="500"/>
 
 ### 2. Image Segmentation
 
-In the image segmentation approach, rather than single pixels, the input are patches of the image. Given this input, the model is able to learn both contextual and spatial information. A convolutional neural network called U-Net was developed specifically for image segmentation tasks. The symmetric contracting and expanding paths of the model architecture allows the model to extract features and increase the resolution of the output. We trained a custom U-Net model with 32 filters and 4 layers for the corn crop segmentation problem.
+In the image segmentation approach, rather than single pixels, the input are patches of the image. Given this input, the model is able to learn both contextual and spatial information. A convolutional neural network called U-Net was developed for image segmentation tasks. The symmetric contracting and expanding paths of the model architecture allow the model to extract features and increase the resolution of the output. Using the [keras-unet](https://github.com/karolzak/keras-unet) package, we trained a custom U-Net model with 32 filters and 4 layers for the corn crop segmentation problem.
 
 The figure below depicts the U-Net architecture from the original paper, [U-net: Convolutional networks for biomedical image segmentation](https://arxiv.org/abs/1505.04597):
 
@@ -46,7 +48,6 @@ The figure below depicts the U-Net architecture from the original paper, [U-net:
 
 ## Results
 
-The two models were trained on July 2017 data, and tested on July 2018 data in the same region. The results show that the image segmentation approach performs better than the single pixel classification approach, with an 10% increase in interesection-over-union. Salt-and-pepper noise can be seen in the single pixel classification predictions, as a result of the model learning on a pixel level not capturing spatial information. The issue is resolved with the image segemntation approach, as the U-Net captures both the contextual and spatial information.
-
+The two models were trained on July 2017 data, and tested on July 2018 data in the same region. The results show that the image segmentation approach performs better than the single pixel classification approach, with an 10% increase in interesection-over-union. Salt-and-pepper noise can be seen in the single pixel classification predictions, as a result of the model learning on a pixel level not capturing spatial information. The issue does not appear with the image segmentation approach, as the U-Net captures both the contextual and spatial information.
 
 <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/results.png" />
