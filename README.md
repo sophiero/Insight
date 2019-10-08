@@ -14,7 +14,7 @@ The python library (https://github.com/sentinel-hub/sentinelhub-py "sentinel-hub
 
 Below is a sample satellite image from the region of interest:
 
-<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/satellite_sample.png" width="250"/>
+<!-- <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/satellite_sample.png" width="250"/> -->
 
 
 ### 2. Cropland Data Layer
@@ -24,7 +24,7 @@ Crop labels were downloaded by area of interest, year and crop from https://nass
 
 Below are the corresponding crop labels for the sample image shown above:
 
-<img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/labels_sample.png" width="250"/>
+<!-- <img src="https://github.com/sophiero/Insight/blob/master/notebooks/figures/labels_sample.png" width="250"/> -->
 
 
 ## Modeling Approaches
