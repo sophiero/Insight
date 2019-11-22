@@ -28,12 +28,16 @@ def load_data(year, img_h=1400, img_w=1400):
     return X, y
 
 def reshape_data(X, y):
+    """ Reshapes data so that columns are spectral bands and rows are pixels """
+
     X_reshaped = X.reshape(-1, X.shape[-1])
     y_reshaped = y.reshape(-1)
 
     return X_reshaped, y_reshaped
 
 def standardize(X):
+    """ Standardizes features by removing mean and scaling to unit variance  """
+
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     return X_scaled
